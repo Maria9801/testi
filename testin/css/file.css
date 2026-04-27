@@ -1,0 +1,581 @@
+/* ОСНОВА */
+html, body{
+    height: 100%;
+    
+}
+
+body{
+    
+    margin: 0;
+background-color: #DBD4C4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 120px;
+    background-color: rgba(4, 4, 3, 0.58)
+}
+.logal{
+    width: 350px;
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    font-size: 23px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover{
+    color: #DBD4C4;
+}
+.logal2{
+    width: auto;
+    height: 30px;
+    display: block;
+}
+.hero_container, p{
+    color: white;
+    font-size: 20px;
+}
+.hero_container{
+    background-color: rgba(4, 4, 3, 0.58);
+    max-width: 765px;
+    height: 293px;
+    border-radius: 15px;
+    padding: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+.hero_container h2{
+    margin: 10px;
+}
+.hero{
+    background: url("../img/image9.png") center/cover no-repeat;
+
+    min-height: 100vh; /* вместо height */
+    display: flex;
+    align-items: center;
+  
+
+}
+.features{
+    padding: 60px 20px;
+}
+.features_title{
+    text-align: center;
+    font-size: 41px;
+    color: #594D3D;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.features_grid{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+.card{
+    width: 556px;
+    background: #D9CEB4;
+    border-radius: 16px;
+    box-shadow: 0px 4px 24px -2px rgba(0,0,0,0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    background: 
+        url("../img/trxtur.png");
+   
+    background-size: cover;
+    background-repeat: no-repeat; /* ВОТ ЭТО РЕШАЕТ */
+    background-blend-mode: multiply;
+}
+.card::after{
+    content:"";
+   
+    inset:0;
+
+    background-image:url("../img/Rectangle3.png");
+    opacity: 0.5;;
+
+    pointer-events:none;
+    border-radius:16px;
+}
+.card_media{
+    position: relative;
+    overflow: hidden;
+}
+.card_media img{
+    width: 100%;
+    display: block;
+}
+.card_label{
+    font-family: "Roboto Slab", serif;
+ 
+ 
+
+    position:absolute;
+
+    left:50%;
+    bottom:220px;
+
+    transform:translateX(-50%);
+
+    font-size:50px;
+
+    font-weight:900;
+
+    color:#7a4a12;
+
+    -webkit-text-stroke:4px black;
+
+    text-shadow: 5px black;
+}
+.card_text{
+  color: #31291D;
+    text-align: center;
+    font-size: 33px;
+    padding: 30px 25px;
+    margin: 0;
+    flex: 1;
+}
+.card_body{
+ display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 240px;
+}
+.card_text2{
+     color: black;
+    font-size: 25px;
+    text-align: right;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #d1bc77
+    );
+    padding: 18px 12px;
+    margin: 0;
+}
+.footer{
+    background-color: #272727;
+    margin-top: auto;
+    color: white;
+    padding: 40px 60px 15px;
+    border-top: 2px solid #8A7C4F;
+}
+.footer_explain {
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #cfcfcf;
+}
+
+/* ЛИНИИ */
+.footer_explain::before,
+.footer_explain::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 3px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a86a,
+        transparent
+    );
+}
+
+/* левая линия */
+.footer_explain::before {
+    left: 0;
+}
+
+/* правая линия */
+.footer_explain::after {
+    right: 0;
+}
+.footer_img{
+    width: 220px;
+    margin-bottom: 15px;
+}
+.footer_container{
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 80px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    display: flex;
+}
+.footer_column{
+    flex: 1px;
+    min-width: 220px;
+    position: relative;
+    padding: 0 40px;
+}
+.footer_text{
+    color: #DBD4C4;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 350px;
+    margin-bottom: 18px;
+}
+.footer_bottom{
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #8A7C4F;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #DBD4C4;
+    transition: 0.3s;
+}
+.footer_bottom:hover{
+    background-color: #8A7C4F;
+    color: black;
+}
+.footer_column h2{
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 30px;
+    color: white;
+}
+.footer_column a{
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+.footer_column a:hover{
+    color: #DBD4C4;
+}
+.footer_us_img{
+    width: 30px;
+    padding-right: 20px;
+}
+.footer_column img{
+    margin: 0;
+}
+.footer_column:nth-child(2)::before,
+.footer_column:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #8f7a45,
+        transparent
+    );
+}
+
+.footer_column:nth-child(2)::before {
+    left: -20px;
+}
+
+.footer_column:nth-child(2)::after {
+    right: 0;
+}
+/*Css для донатов*/
+.donate_card{
+    width: 456px;
+    background: #D9CEB4;
+    border-radius: 16px;
+    box-shadow: 0px 4px 24px -2px rgba(0,0,0,0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    background: 
+        url("../img/trxtur.png");
+   
+    background-size: cover;
+    background-repeat: no-repeat; /* ВОТ ЭТО РЕШАЕТ */
+    background-blend-mode: multiply;
+}
+.donate_img{
+    width: 465px;
+    display: block;
+  object-fit: cover;
+  height: 355px;
+}
+.donate_text{
+  color: #31291D;
+    font-size: 25px;
+    padding: 30px 20px;
+    margin: 0;
+}
+.donate_grid{
+    display: grid;
+    justify-items: center;
+    gap: 50px 70px;
+    grid-template-columns: repeat(3,1fr);
+}
+.donate_title{
+    text-align: center;
+    font-size: 40px;
+    color: #7a4a12;
+    margin-bottom: 40px;
+}
+.buy_btn{
+    color: white;
+    background-color: rgb(21, 114, 21);
+    border-radius: 10px;
+    padding: 3px 35px;
+    font-size: 30px;
+    display: flex;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px rgb(27, 196, 27);
+}
+.donate_page, .rules{
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+}
+.buy_btn:hover{
+    background-color: rgb(27, 196, 27);
+    transition: 0.3s;
+}
+.donate_name{
+    font-family: "Roboto Slab", serif;
+    font-size:50px;
+    font-weight:900;
+    color:#7a4a12;
+    -webkit-text-stroke:4px black;
+    margin-top: -40px;
+  margin-bottom: 10px;
+}
+.rules_title{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: #594D3D;
+}
+.rules_text{
+    
+    color: black;
+    padding: 40px 60px;
+    line-height: 1.6;
+}
+.rules_grid {
+    border-radius: 15px;
+    display: flex;
+    width: 75%;
+    margin: 0 auto 30px;
+    flex-direction: column;
+
+    background: 
+        url("../img/trxtur.png");
+   
+    background-size: cover;
+    background-repeat: no-repeat; /* ВОТ ЭТО РЕШАЕТ */
+    background-blend-mode: multiply;
+}
+.rules_help_text{
+    font-size: 27px;
+    color: black;
+}
+.rules_help_box{
+    width: 8%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    background: 
+        url("../img/trxtur.png");
+   
+    background-size: cover;
+    background-repeat: no-repeat; /* ВОТ ЭТО РЕШАЕТ */
+    background-blend-mode: multiply;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.rules_help_box a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+.rules_help{
+    margin-left: 230px;
+}
+.rules_help_box a:hover{
+    color: #8A7C4F;
+}
+.content{
+    padding: 140px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.content_title{
+    font-size: 50px;
+    color: #8A7C4F;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.content_box{
+        background: 
+        url("../img/trxtur.png");
+   
+    background-size: cover;
+    background-repeat: no-repeat; /* ВОТ ЭТО РЕШАЕТ */
+    background-blend-mode: multiply;
+    border-radius: 10px;
+    padding: 70px 30px;
+}
+.content_text{
+    color: black;
+    font-size: 25px;
+}
+.video{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+
+
+
+/* Декоративные элементы */
+.hero_decor{
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero{
+    position: relative;
+    overflow: hidden; /* 🔥 ОБРЕЗАЕТ картинку */
+}
+section{
+    overflow: hidden;
+}
+.hero_right{
+    position: absolute;
+
+    right: -2%;
+    bottom: -5%;
+
+    width: 350px;
+    height: 450px;
+
+    background-image: url('../img/image18.png');
+    background-size: contain; /* 🔥 важно */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    pointer-events: none;
+    z-index: 1;
+}
+.hero_left{
+    position: absolute;
+
+    right: 85%;
+    bottom: 62%;
+
+    width: 350px;
+    height: 450px;
+
+    background-image: url('../img/image20.svg');
+    background-size: contain; /* 🔥 важно */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    pointer-events: none;
+    z-index: 1;
+}
+.features_left{
+    position: absolute;
+
+    right: 81%;
+    bottom: -33%;
+
+    width: 350px;
+    height: 450px;
+
+    background-image: url('../img/image11.svg');
+    background-size: contain; /* 🔥 важно */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    pointer-events: none;
+    z-index: 1;
+}
+.features_right{
+    position: absolute;
+
+    right: -10%;
+    bottom: -93%;
+    
+    width: 350px;
+    height: 450px;
+
+    background-image: url('../img/image10.svg');
+    background-size: contain; /* 🔥 важно */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.footer_right{
+    position: absolute;
+
+    right: -7%;
+    bottom: -160%;
+    
+    width: 350px;
+    height: 450px;
+
+    background-image: url('../img/image16.svg');
+    background-size: contain; /* 🔥 важно */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    pointer-events: none;
+    z-index: 1;
+}
